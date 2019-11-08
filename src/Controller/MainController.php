@@ -14,7 +14,7 @@ class MainController
     {
         $number = random_int(0, 100);
         return new Response(
-            '<html><body>Num is: '.$number.'</body></html>'
+            '<html><body>Num is: ' . $number . '</body></html>'
         );
     }
 }
