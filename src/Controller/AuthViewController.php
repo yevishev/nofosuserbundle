@@ -16,13 +16,17 @@ class AuthViewController extends AbstractController
     use TargetPathTrait;
 
     /**
-     * @Route("/", name="main_page")
+     * @Route("/login", name="main_page")
      */
-    public function mainPage()
+    public function mainPage(Request $request, Security $security, AuthenticationUtils $helper): Response
     {
         if ($security->isGranted('ROLE_USER')){
             return $this->redirectToRoute('profile_page');
         }
 
+        $this->render('auth.html.twig',[
+            'last_username' => $helper->getLastUsername(),
+            'error' => $helper->getLastAuthenticationError(),
+        ]);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\EquatableInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -18,17 +19,21 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=18, unique=true)
      */
     private $phone;
 
     /**
-     * @ORM\Column(type="json")
+     *
+     * @var string
+     *
+     * @ORM\Column(type="string", length=255)
      */
-    private $roles = [];
+    private $roles;
 
     /**
-     * @var string The hashed password
+     * @var string
+     *
      * @ORM\Column(type="string")
      */
     private $password;
@@ -86,7 +91,7 @@ class User implements UserInterface
      */
     public function getRoles(): array
     {
-        $roles = $this->roles;
+        $roles = json_decode($this->roles, true);
         // guarantee every user at least has ROLE_USER
         $roles[] = 'ROLE_USER';
 
@@ -95,7 +100,7 @@ class User implements UserInterface
 
     public function setRoles(array $roles): self
     {
-        $this->roles = $roles;
+        $this->roles = json_encode($roles);
 
         return $this;
     }
