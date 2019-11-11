@@ -3,30 +3,44 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Security;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-use Symfony\Component\Security\Http\Util\TargetPathTrait;
 
 class AuthViewController extends AbstractController
 {
-
-    use TargetPathTrait;
-
-    /**
-     * @Route("/login", name="main_page")
-     */
-    public function mainPage(Request $request, Security $security, AuthenticationUtils $helper): Response
+     /**
+      * @Route("/", name="auth_index")
+      */
+    public function viewAuth()
     {
-        if ($security->isGranted('ROLE_USER')){
-            return $this->redirectToRoute('profile_page');
-        }
-
-        $this->render('auth.html.twig',[
-            'last_username' => $helper->getLastUsername(),
-            'error' => $helper->getLastAuthenticationError(),
-        ]);
+        return $this->render('authorization/auth.html.twig');
     }
 }
+
+//
+//namespace App\Controller;
+//
+//use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+//use Symfony\Component\HttpFoundation\Request;
+//use Symfony\Component\HttpFoundation\Response;
+//use Symfony\Component\Routing\Annotation\Route;
+//use Symfony\Component\Security\Core\Security;
+//use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+//use Symfony\Component\Security\Http\Util\TargetPathTrait;
+//
+//class AuthViewController extends AbstractController
+//{
+//
+//    use TargetPathTrait;
+//
+//    /**
+//     * @Route("/login", name="main_page")
+//     */
+//    public function mainPage(Request $request, Security $security, AuthenticationUtils $helper): Response
+//    {
+//        if ($security->isGranted('ROLE_USER')){
+//            return $this->redirectToRoute('profile_page');
+//        }
+//
+//        $this->render('authorization/auth.html.twig');
+//    }
+//}

@@ -10,7 +10,9 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+            number is {{ number }}
+        {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
