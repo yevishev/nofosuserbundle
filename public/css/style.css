@@ -1,0 +1,53 @@
+
+.main {
+    width: 1000px;
+    height: 800px;
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.auth {
+    width: 263px;
+    height: 211px;
+    position: absolute;
+    top: 80%;
+    left: 38%;
+    margin: -135px 0 0 -134px;
+    border-radius: 5%;
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+.form-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+}
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.buttons > button {
+    margin-right: 15px;
+}
+.register {
+    width: 1000px;
+    height: 1200px;
+    background-image: url("Women_Law.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sign {
+    width: 263px;
+    height: 437px;
+    position: absolute;
+    top: 34%;
+    left: 21%;
+    margin: -135px 0 0 -134px;
+    border-radius: 5%;
+    border: 1px solid #dddddd;
+    padding: 10px;
+}

@@ -48,6 +48,12 @@ class User implements UserInterface
      */
     private $date_reg;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Company")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $company;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -158,6 +164,18 @@ class User implements UserInterface
     public function setDateReg(\DateTimeImmutable $date_reg): self
     {
         $this->date_reg = $date_reg;
+
+        return $this;
+    }
+
+    public function getCompany(): ?Company
+    {
+        return $this->company;
+    }
+
+    public function setCompany(?Company $company): self
+    {
+        $this->company = $company;
 
         return $this;
     }

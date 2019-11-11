@@ -23,5 +23,6 @@ class AuthViewController extends AbstractController
         if ($security->isGranted('ROLE_USER')){
             return $this->redirectToRoute('profile_page');
         }
+
     }
 }
