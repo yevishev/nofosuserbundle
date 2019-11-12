@@ -1,16 +1,20 @@
 {% extends 'base.html.twig' %}
-
+{% block title %}
+   Hi, {{ first_name }}!
+{% endblock %}
 {% block body %}
 <div class="container-fluid">
     <div class="row justify-content-lg-center">
         <div class="col-lg-auto">
             <h1>i know all about u!</h1>
-            <p>ur name: </p>
-            <p>your phone: </p>
+            <p>ur first name: {{ first_name }}</p>
+            <p>ur last name: {{ last_name }}</p>
+            <p>your phone: {{ phone }}</p>
+            <p>your id: {{ id }}</p>
             <p>u work in: </p>
             <p>u`ve been invited by: </p>
             <div class="form-flex">
-                <form action="">
+                <form action="post">
                     <button type="submit" class="btn btn-danger" name="submit">Log out</button>
                 </form>
             </div>

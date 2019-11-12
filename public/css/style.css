@@ -8,7 +8,7 @@
 }
 .auth {
     width: 263px;
-    height: 211px;
+    height: auto;
     position: absolute;
     top: 80%;
     left: 38%;
@@ -42,7 +42,7 @@
 }
 .sign {
     width: 263px;
-    height: 437px;
+    height: auto;
     position: absolute;
     top: 34%;
     left: 21%;
@@ -50,4 +50,11 @@
     border-radius: 5%;
     border: 1px solid #dddddd;
     padding: 10px;
+}
+form > div {
+    margin: 8px;
+}
+#registration_form_agreeTerms {
+    position: relative !important;
+    margin: 0 0 0 7px !important;
 }

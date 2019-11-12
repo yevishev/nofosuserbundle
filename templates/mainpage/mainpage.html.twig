@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Mainpage
+{% endblock %}
+{% block body %}
+<div class="container-fluid">
+    <div class="row justify-content-lg-center">
+        <div class="col-lg-auto">
+            <h1 style="font-size: 40px">Main page</h1>
+            <a href="{{ path('app_login') }}">Signin</a><br>
+            <a href="{{ path('app_register') }}">Signup</a><br>
+            <a href="{{ path('app_profile_view') }}">My profile</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

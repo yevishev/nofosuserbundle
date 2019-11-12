@@ -1,7 +1,6 @@
 <?php
 
-
-namespace App\Controller;
+namespace App\Security;
 
 use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
@@ -21,7 +20,7 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticator;
 use Symfony\Component\Security\Http\Util\TargetPathTrait;
 
-class AuthModController extends AbstractFormLoginAuthenticator
+class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 {
     use TargetPathTrait;
 
@@ -30,17 +29,22 @@ class AuthModController extends AbstractFormLoginAuthenticator
     private $csrfTokenManager;
     private $passwordEncoder;
 
-    public function __construct(EntityManagerInterface $entityManager, RouterInterface $router, CsrfTokenManagerInterface $csrfTokenManager, UserPasswordEncoderInterface $passwordEncoder)
+    public function __construct(EntityManagerInterface $entityManager,
+                                RouterInterface $router,
+                                CsrfTokenManagerInterface $csrfTokenManager,
+                                UserPasswordEncoderInterface $passwordEncoder
+    )
     {
-        $this->entityManager;
-        $this->router;
-        $this->csrfTokenManager;
-        $this->passwordEncoder;
+        $this->entityManager = $entityManager;
+        $this->router = $router;
+        $this->csrfTokenManager = $csrfTokenManager;
+        $this->passwordEncoder = $passwordEncoder;
     }
 
     public function supports(Request $request)
     {
-        return 'app_login' === $request->attributes->get('_route') && $request->isMethod('POST');
+        return 'app_login' === $request->attributes->get('_route')
+            && $request->isMethod('POST');
     }
 
     public function getCredentials(Request $request)
@@ -52,7 +56,7 @@ class AuthModController extends AbstractFormLoginAuthenticator
         ];
         $request->getSession()->set(
             Security::LAST_USERNAME,
-            $credentials['email']
+            $credentials['phone']
         );
         return $credentials;
     }
@@ -85,7 +89,7 @@ class AuthModController extends AbstractFormLoginAuthenticator
         }
 
         // For example : return new RedirectResponse($this->router->generate('some_route'));
-        throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
+        return new RedirectResponse($this->router->generate('app_profile_view'));
     }
 
     protected function getLoginUrl()
