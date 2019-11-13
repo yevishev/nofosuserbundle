@@ -66,7 +66,7 @@ class RegistrationFormType extends AbstractType
                 'attr' => [
                     'class' => 'form-check-input'
                 ],
-                'label' => 'Remember me'
+                'label' => 'Aссept terms '
             ])
         ;
     }

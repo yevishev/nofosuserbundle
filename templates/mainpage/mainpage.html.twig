@@ -7,9 +7,12 @@
     <div class="row justify-content-lg-center">
         <div class="col-lg-auto">
             <h1 style="font-size: 40px">Main page</h1>
-            <a href="{{ path('app_login') }}">Signin</a><br>
-            <a href="{{ path('app_register') }}">Signup</a><br>
+            <a href="{{ path('app_security_login') }}">Signin</a><br>
+            <a href="{{ path('app_registration_register') }}">Signup</a><br>
+            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
             <a href="{{ path('app_profile_view') }}">My profile</a>
+            {% else %}
+            {% endif %}
         </div>
     </div>
 </div>
