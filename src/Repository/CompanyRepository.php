@@ -35,7 +35,16 @@ class CompanyRepository extends ServiceEntityRepository
         ;
     }
     */
-
+//    public function findByExampleField($companyFromForm)
+//    {
+//        return $this->getEntityManager()->createQueryBuilder()
+//            ->from(Company::class, 'Company')
+//            ->select('Company.name_company')
+//            ->andWhere('Company.name_company = :val')
+//            ->setParameter('val', $companyFromForm)
+//            ->getQuery()
+//            ->getArrayResult();
+//    }
     /*
     public function findOneBySomeField($value): ?Company
     {

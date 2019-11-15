@@ -18,4 +18,5 @@ class MainpageController extends AbstractController
         }
         return $this->render('mainpage/mainpage.html.twig');
     }
+
 }

@@ -2,9 +2,15 @@
 
 namespace App\Form;
 
+use App\Entity\Company;
 use App\Entity\User;
+use App\Repository\UserRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -13,7 +19,7 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
-class RegistrationFormType extends AbstractType
+class   RegistrationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -35,6 +41,10 @@ class RegistrationFormType extends AbstractType
                     'placeholder' => 'Phone number'
                 ],
                 'label' => false
+            ])
+            ->add('inviter', EntityType::class, [
+                'class' => User::class,
+                'choice_label' => 'phone'
             ])
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,

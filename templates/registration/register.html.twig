@@ -7,11 +7,12 @@
 {% block body %}
 <div class="container-fluid register">
     <div class="row">
-        <div class="sign">
+        <div class="auth">
             {{ form_start(registrationForm) }}
                 {{ form_row(registrationForm.first_name) }}
                 {{ form_row(registrationForm.last_name) }}
                 {{ form_row(registrationForm.phone) }}
+                {{ form_row(registrationForm.inviter) }}
                 {{ form_row(registrationForm.plainPassword) }}
                 {{ form_row(registrationForm.agreeTerms) }}
             <button class="btn btn-primary">

@@ -3,13 +3,13 @@
     Authorization
 {% endblock %}
 {% block body %}
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
     <div class="container-fluid main">
         <div class="row">
             <div class="auth">
                 <form method="post" class="form-flex">
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
                     <div class="form-group">
                         <label for="inputPhone">phone</label>
                         <input type="tel" class="form-control" name="phone"  id="inputPhone" placeholder="enter number" value="{{ last_username }}" required autofocus>

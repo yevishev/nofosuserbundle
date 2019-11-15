@@ -1,18 +1,10 @@
-
-.main {
-    width: 1000px;
-    height: 800px;
-    background-image: url("background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
 .auth {
-    width: 263px;
+    width: 264px;
     height: auto;
     position: absolute;
-    top: 80%;
-    left: 38%;
-    margin: -135px 0 0 -134px;
+    top: 50%;
+    left: 50%;
+    margin: -235px 0 0 -132px;
     border-radius: 5%;
     border: 1px solid #dddddd;
     padding: 10px;
@@ -33,28 +25,10 @@
 .buttons > button {
     margin-right: 15px;
 }
-.register {
-    width: 1000px;
-    height: 1200px;
-    background-image: url("Women_Law.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.sign {
-    width: 263px;
-    height: auto;
-    position: absolute;
-    top: 34%;
-    left: 21%;
-    margin: -135px 0 0 -134px;
-    border-radius: 5%;
-    border: 1px solid #dddddd;
-    padding: 10px;
-}
 form > div {
-    margin: 8px;
+    margin-top: 8px;
 }
 #registration_form_agreeTerms {
     position: relative !important;
-    margin: 0 0 0 7px !important;
+    margin: 0 0 0 5px !important;
 }
