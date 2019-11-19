@@ -19,11 +19,17 @@ class ProfileController extends AbstractController
      * @param EntityManagerInterface $em
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function view(/*EntityManagerInterface $em*/)
+
+    public function view()
     {
         /** @var User $user */
-//        $userList = $em->getRepository(User::class)->findByExampleField();
+        //$tempList  = $this->getDoctrine()->getManager()->getRepository(User::class)->findByExampleField();
         $user = $this->getUser();
+        //$list = [];
+//        foreach ($tempList as $value){
+//            $id = $value['id'];
+//            $list[$id] = "{$value['first_name']} {$value['last_name']} (тел. {$value['phone']})";
+//        }
         $dataUser = [
             'phone' => $user->getPhone(),
             'first name' => $user->getFirstName(),
@@ -31,7 +37,7 @@ class ProfileController extends AbstractController
             'id' => $user->getId()
         ];
         return $this->render('profile/profile.html.twig', [
-//            'userList' => $userList,
+//            'userList' => $list,
             'phone' => $dataUser['phone'],
             'first_name' => $dataUser['first name'],
             'last_name' => $dataUser['last name'],

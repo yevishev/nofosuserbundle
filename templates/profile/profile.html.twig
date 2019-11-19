@@ -11,11 +11,16 @@
             <p>ur last name: {{ last_name }}</p>
             <p>your phone: {{ phone }}</p>
             <p>your id: {{ id }}</p>
-{#            <ul>#}
+{#            <select>#}
 {#                {% for user in userList %}#}
-{#                    <li>{{ user.phone|e }}</li>#}
+{#                    <option> {{ user|escape }} </option>#}
 {#                {% endfor %}#}
-{#            </ul>#}
+{#            </select>#}
+{#            <select>#}
+{#                {% for user in userList %}#}
+{#                    <option> {{ user|escape }} </option>#}
+{#                {% endfor %}#}
+{#            </select>#}
             <p>u work in: </p>
             <p>u`ve been invited by: </p>
             <div class="form-flex">

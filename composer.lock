@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0bc80cbc21ef6a01451a764d0bdb8d71",
+    "content-hash": "dcfe09cd8ecf650cdef78ab38de15fbd",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2548,7 +2548,7 @@
         },
         {
             "name": "symfony/form",
-            "version": "v4.3.7",
+            "version": "v4.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
@@ -4445,7 +4445,7 @@
         },
         {
             "name": "symfony/validator",
-            "version": "v4.3.7",
+            "version": "v4.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/validator.git",

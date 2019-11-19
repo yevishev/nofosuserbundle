@@ -12,12 +12,12 @@
                 {{ form_row(registrationForm.first_name) }}
                 {{ form_row(registrationForm.last_name) }}
                 {{ form_row(registrationForm.phone) }}
-                {{ form_row(registrationForm.inviter) }}
-                {{ form_row(registrationForm.plainPassword) }}
+{#                {{ form_row(registrationForm.phone) }}#}
+{#                {{ form_row(registrationForm.company) }}#}
+                {{ form_row(registrationForm.referrer) }}
+                {{ form_row(registrationForm.enterPassword) }}
                 {{ form_row(registrationForm.agreeTerms) }}
-            <button class="btn btn-primary">
-                Sign in
-            </button>
+                {{ form_row(registrationForm.submit) }}
             {{ form_end(registrationForm) }}
         </div>
     </div>

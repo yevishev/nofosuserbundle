@@ -61,6 +61,13 @@ class User implements UserInterface
      */
     private $company;
 
+    private $referrer;
+
+    public function setReferrer($referrer): void
+    {
+        $this->referrer = $referrer;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

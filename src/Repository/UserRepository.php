@@ -22,15 +22,17 @@ class UserRepository extends ServiceEntityRepository
     // /**
     //  * @return User[] Returns an array of User objects
     //  */
+    //Метод для вывода массива существующих пользователей
+    public function findByExampleField()
+    {
+        return $this->getEntityManager()->createQueryBuilder()
+            ->from(User::class, 'User')
+            ->select('User.id', 'User.first_name', 'User.last_name', 'User.phone')
+            ->getQuery()
+            ->getArrayResult();
+    }
 
-//    public function findAllUsers()
-//    {
-//        return $this->getEntityManager()->createQueryBuilder()
-//            ->from(User::class, 'User')
-//            ->select('User.phone')
-//            ->getQuery()
-//            ->getArrayResult();
-//    }
+
 
     /*
     public function findOneBySomeField($value): ?User

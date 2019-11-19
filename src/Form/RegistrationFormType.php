@@ -2,9 +2,11 @@
 
 namespace App\Form;
 
+use App\Controller\RegistrationController;
 use App\Entity\Company;
 use App\Entity\User;
 use App\Repository\UserRepository;
+use App\Services\ReferrerService;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -12,6 +14,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -19,10 +23,20 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
-class   RegistrationFormType extends AbstractType
+class RegistrationFormType extends AbstractType
 {
+    /**
+     * @var ReferrerService
+     */
+    private $rs;
+
+    public function __construct(ReferrerService $rs)
+    {
+        $this->rs = $rs;
+    }
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
         $builder
             ->add('first_name', TextType::class, [
                 'attr' => ['class' => 'form-control',
@@ -42,13 +56,21 @@ class   RegistrationFormType extends AbstractType
                 ],
                 'label' => false
             ])
-            ->add('inviter', EntityType::class, [
-                'class' => User::class,
-                'choice_label' => 'phone'
+            ->add('referrer', ChoiceType::class, [
+                'mapped' => false,
+                'choices' => $this->rs->query(),
             ])
-            ->add('plainPassword', PasswordType::class, [
-                // instead of being set onto the object directly,
-                // this is read and encoded in the controller
+            ->add('enterPassword', RepeatedType::class, [
+                'type' => PasswordType::class,
+                'invalid_message' => 'Пароли не совпадают',
+                'options' => ['attr' => ['class' => 'form-control']],
+                'required' => true,
+                'first_options' => [
+                    'label' => false,
+                ],
+                'second_options' => [
+                    'label' => false,
+                ],
                 'mapped' => false,
                 'constraints' => [
                     new NotBlank([
@@ -61,10 +83,6 @@ class   RegistrationFormType extends AbstractType
                         'max' => 18,
                     ]),
                 ],
-                'attr' => ['class' => 'form-control',
-                    'placeholder' => 'Password'
-                ],
-                'label' => false
             ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
@@ -77,6 +95,9 @@ class   RegistrationFormType extends AbstractType
                     'class' => 'form-check-input'
                 ],
                 'label' => 'Aссept terms '
+            ])
+            ->add('submit', SubmitType::class, [
+                'attr' => ['class' => 'btn btn-primary']
             ])
         ;
     }
