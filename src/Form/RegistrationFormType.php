@@ -59,6 +59,18 @@ class RegistrationFormType extends AbstractType
             ->add('referrer', ChoiceType::class, [
                 'mapped' => false,
                 'choices' => $this->rs->query(),
+                'label' => false,
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            ->add('company', TextType::class, [
+                'mapped' => false,
+                'label' => false,
+                'attr' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'Company'
+                ]
             ])
             ->add('enterPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
@@ -67,9 +79,17 @@ class RegistrationFormType extends AbstractType
                 'required' => true,
                 'first_options' => [
                     'label' => false,
+                    'attr' => [
+                        'placeholder' => 'Enter password',
+                        'class' => 'form-control'
+                    ]
                 ],
                 'second_options' => [
                     'label' => false,
+                    'attr' => [
+                        'placeholder' => 'Repeat password',
+                        'class' => 'form-control'
+                    ]
                 ],
                 'mapped' => false,
                 'constraints' => [

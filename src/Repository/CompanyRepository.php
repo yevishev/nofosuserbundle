@@ -36,16 +36,17 @@ class CompanyRepository extends ServiceEntityRepository
     }
     */
     //Метод для поиска компании из существующих компаний
-    public function findByExampleField($companyFromForm)
+    public function findByCompany($name_company)
     {
         return $this->getEntityManager()->createQueryBuilder()
+            ->select('id')
             ->from(Company::class, 'Company')
-            ->select('Company.name_company')
-            ->andWhere('Company.name_company = :val')
-            ->setParameter('val', $companyFromForm)
+            ->where('Company.name_company = :val')
+            ->setParameter('val', $name_company)
             ->getQuery()
-            ->getArrayResult();
+            ->getResult();
     }
+
     /*
     public function findOneBySomeField($value): ?Company
     {

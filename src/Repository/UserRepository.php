@@ -23,7 +23,7 @@ class UserRepository extends ServiceEntityRepository
     //  * @return User[] Returns an array of User objects
     //  */
     //Метод для вывода массива существующих пользователей
-    public function findByExampleField()
+    public function findAllUsers()
     {
         return $this->getEntityManager()->createQueryBuilder()
             ->from(User::class, 'User')

@@ -1,10 +1,10 @@
 .auth {
-    width: 264px;
+    width: 300px;
     height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -235px 0 0 -132px;
+    margin: -235px 0 0 -150px;
     border-radius: 5%;
     border: 1px solid #dddddd;
     padding: 10px;
