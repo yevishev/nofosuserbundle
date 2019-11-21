@@ -32,13 +32,14 @@ class ReferrerService
         return $list;
     }
 
-    public function queryCompany($company)
+    public function queryCompany($name_company)
     {
-        $result = $this->em->getRepository(Company::class)->findByCompany($company);
-        $com = new Company();
-        if(empty($result)) {
-            $com->setNameCompany($company);
+        $com = $this->em->getRepository(Company::class)->findByCompany($name_company);
+        if(empty($com)) {
+            $com = new Company();
+            $com->setNameCompany($name_company);
+            $this->em->persist($com);
         }
-        return $com->getId();
+        return $com;
     }
 }

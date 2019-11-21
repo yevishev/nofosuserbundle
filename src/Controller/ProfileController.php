@@ -2,11 +2,9 @@
 
 namespace App\Controller;
 
-use App\Entity\Company;
 use App\Entity\User;
-use App\Security\LoginFormAuthenticator;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -16,32 +14,28 @@ class ProfileController extends AbstractController
 {
     /**
      * @Route("/")
-     * @param EntityManagerInterface $em
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
 
-    public function view()
+    public function view(): Response
     {
         /** @var User $user */
-        //$tempList  = $this->getDoctrine()->getManager()->getRepository(User::class)->findByExampleField();
         $user = $this->getUser();
-        //$list = [];
-//        foreach ($tempList as $value){
-//            $id = $value['id'];
-//            $list[$id] = "{$value['first_name']} {$value['last_name']} (тел. {$value['phone']})";
-//        }
         $dataUser = [
             'phone' => $user->getPhone(),
             'first name' => $user->getFirstName(),
             'last name' => $user->getLastName(),
-            'id' => $user->getId()
+            'company' => $user->getCompany()->getNameCompany(),
+            'inviter_fn' => $user->getInviter()->getFirstName(),
+            'inviter_ln' => $user->getInviter()->getLastName(),
         ];
         return $this->render('profile/profile.html.twig', [
-//            'userList' => $list,
             'phone' => $dataUser['phone'],
             'first_name' => $dataUser['first name'],
             'last_name' => $dataUser['last name'],
-            'id' => $dataUser['id'],
+            'company' => $dataUser['company'],
+            'inviter_fn' => $dataUser['inviter_fn'],
+            'inviter_ln' => $dataUser['inviter_ln'],
         ]);
     }
 }

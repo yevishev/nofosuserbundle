@@ -10,19 +10,8 @@
             <p>ur first name: {{ first_name }}</p>
             <p>ur last name: {{ last_name }}</p>
             <p>your phone: {{ phone }}</p>
-            <p>your id: {{ id }}</p>
-{#            <select>#}
-{#                {% for user in userList %}#}
-{#                    <option> {{ user|escape }} </option>#}
-{#                {% endfor %}#}
-{#            </select>#}
-{#            <select>#}
-{#                {% for user in userList %}#}
-{#                    <option> {{ user|escape }} </option>#}
-{#                {% endfor %}#}
-{#            </select>#}
-            <p>u work in: </p>
-            <p>u`ve been invited by: </p>
+            <p>invited by: {{ inviter_fn }} {{ inviter_ln }}</p>
+            <p>work in: {{ company }}</p>
             <div class="form-flex">
                 <form action="{{path('app_logout')}}">
                     <button type="submit" class="btn btn-danger" name="submit">Log out</button>

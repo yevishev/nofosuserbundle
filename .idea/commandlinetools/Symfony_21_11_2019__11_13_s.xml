@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.4.xsd" frameworkId="com.symfony" name="Symfony_08.11.2019, 17:29_s" invoke="php.exe C:\OSPanel\OSPanel\domains\testing\bin\console" alias="s" enabled="true" version="2">
+<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.4.xsd" frameworkId="com.symfony" name="Symfony_21.11.2019, 11:13_s" invoke="php.exe C:\OSPanel\OSPanel\domains\testing\bin\console" alias="s" enabled="true" version="2">
   <extraData><![CDATA[version:3]]></extraData>
   <command>
     <name>about</name>
@@ -558,6 +558,46 @@
     </optionsBefore>
   </command>
   <command>
+    <name>debug:form</name>
+    <help><![CDATA[The <b>debug:form</b> command displays information about form types.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console debug:form</b><br> <br> The command lists all built-in types, services types, type extensions and <br> guessers currently available.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console debug:form Symfony\Component\Form\Extension\Core\Type\ChoiceType</b><br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console debug:form ChoiceType</b><br> <br> The command lists all defined options that contains the given form type, <br> as well as their parents and type extensions.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console debug:form ChoiceType choice_value</b><br> <br> Use the <b>--show-deprecated</b> option to display form types with <br> deprecated options or the deprecated options of the given form type:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console debug:form --show-deprecated</b><br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console debug:form ChoiceType --show-deprecated</b><br> <br> The command displays the definition of the given option name.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console debug:form --format=json</b><br> <br> The command lists everything in a machine readable json format.<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--show-deprecated</td><td></td><td>Display deprecated options in form types</td></tr> <tr><td>--format</td><td></td><td>The output format (txt or json)</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>class[=null] option[=null]</params>
+    <optionsBefore>
+      <option name="--show-deprecated" shortcut="">
+        <help><![CDATA[Display deprecated options in form types]]></help>
+      </option>
+      <option name="--format" shortcut="" pattern="equals">
+        <help><![CDATA[The output format (txt or json)]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
     <name>debug:router</name>
     <help><![CDATA[The <b>debug:router</b> displays the configured routes:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console debug:router</b><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--show-controllers</td><td></td><td>Show assigned controllers in overview</td></tr> <tr><td>--format</td><td></td><td>The output format (txt, xml, json, or md)</td></tr> <tr><td>--raw</td><td></td><td>To output raw route(s)</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <params>name[=null]</params>
@@ -887,145 +927,6 @@
     </optionsBefore>
   </command>
   <command>
-    <name>doctrine:cache:contains</name>
-    <help><![CDATA[Check if a cache entry exists<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
-    <params>cache-name cache-id</params>
-    <optionsBefore>
-      <option name="--help" shortcut="-h">
-        <help><![CDATA[Display this help message]]></help>
-      </option>
-      <option name="--quiet" shortcut="-q">
-        <help><![CDATA[Do not output any message]]></help>
-      </option>
-      <option name="--verbose" shortcut="-v">
-        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
-      </option>
-      <option name="--version" shortcut="-V">
-        <help><![CDATA[Display this application version]]></help>
-      </option>
-      <option name="--ansi" shortcut="">
-        <help><![CDATA[Force ANSI output]]></help>
-      </option>
-      <option name="--no-ansi" shortcut="">
-        <help><![CDATA[Disable ANSI output]]></help>
-      </option>
-      <option name="--no-interaction" shortcut="-n">
-        <help><![CDATA[Do not ask any interactive question]]></help>
-      </option>
-      <option name="--env" shortcut="-e" pattern="equals">
-        <help><![CDATA[The Environment name.]]></help>
-      </option>
-      <option name="--no-debug" shortcut="">
-        <help><![CDATA[Switches off debug mode.]]></help>
-      </option>
-    </optionsBefore>
-  </command>
-  <command>
-    <name>doctrine:cache:delete</name>
-    <help><![CDATA[Delete a cache entry<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--all</td><td>(-a)</td><td>Delete all cache entries in provider</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
-    <params>cache-name cache-id[=null]</params>
-    <optionsBefore>
-      <option name="--all" shortcut="-a">
-        <help><![CDATA[Delete all cache entries in provider]]></help>
-      </option>
-      <option name="--help" shortcut="-h">
-        <help><![CDATA[Display this help message]]></help>
-      </option>
-      <option name="--quiet" shortcut="-q">
-        <help><![CDATA[Do not output any message]]></help>
-      </option>
-      <option name="--verbose" shortcut="-v">
-        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
-      </option>
-      <option name="--version" shortcut="-V">
-        <help><![CDATA[Display this application version]]></help>
-      </option>
-      <option name="--ansi" shortcut="">
-        <help><![CDATA[Force ANSI output]]></help>
-      </option>
-      <option name="--no-ansi" shortcut="">
-        <help><![CDATA[Disable ANSI output]]></help>
-      </option>
-      <option name="--no-interaction" shortcut="-n">
-        <help><![CDATA[Do not ask any interactive question]]></help>
-      </option>
-      <option name="--env" shortcut="-e" pattern="equals">
-        <help><![CDATA[The Environment name.]]></help>
-      </option>
-      <option name="--no-debug" shortcut="">
-        <help><![CDATA[Switches off debug mode.]]></help>
-      </option>
-    </optionsBefore>
-  </command>
-  <command>
-    <name>doctrine:cache:flush</name>
-    <help><![CDATA[Flush a given cache<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
-    <params>cache-name</params>
-    <optionsBefore>
-      <option name="--help" shortcut="-h">
-        <help><![CDATA[Display this help message]]></help>
-      </option>
-      <option name="--quiet" shortcut="-q">
-        <help><![CDATA[Do not output any message]]></help>
-      </option>
-      <option name="--verbose" shortcut="-v">
-        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
-      </option>
-      <option name="--version" shortcut="-V">
-        <help><![CDATA[Display this application version]]></help>
-      </option>
-      <option name="--ansi" shortcut="">
-        <help><![CDATA[Force ANSI output]]></help>
-      </option>
-      <option name="--no-ansi" shortcut="">
-        <help><![CDATA[Disable ANSI output]]></help>
-      </option>
-      <option name="--no-interaction" shortcut="-n">
-        <help><![CDATA[Do not ask any interactive question]]></help>
-      </option>
-      <option name="--env" shortcut="-e" pattern="equals">
-        <help><![CDATA[The Environment name.]]></help>
-      </option>
-      <option name="--no-debug" shortcut="">
-        <help><![CDATA[Switches off debug mode.]]></help>
-      </option>
-    </optionsBefore>
-  </command>
-  <command>
-    <name>doctrine:cache:stats</name>
-    <help><![CDATA[Get stats on a given cache provider<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
-    <params>cache-name</params>
-    <optionsBefore>
-      <option name="--help" shortcut="-h">
-        <help><![CDATA[Display this help message]]></help>
-      </option>
-      <option name="--quiet" shortcut="-q">
-        <help><![CDATA[Do not output any message]]></help>
-      </option>
-      <option name="--verbose" shortcut="-v">
-        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
-      </option>
-      <option name="--version" shortcut="-V">
-        <help><![CDATA[Display this application version]]></help>
-      </option>
-      <option name="--ansi" shortcut="">
-        <help><![CDATA[Force ANSI output]]></help>
-      </option>
-      <option name="--no-ansi" shortcut="">
-        <help><![CDATA[Disable ANSI output]]></help>
-      </option>
-      <option name="--no-interaction" shortcut="-n">
-        <help><![CDATA[Do not ask any interactive question]]></help>
-      </option>
-      <option name="--env" shortcut="-e" pattern="equals">
-        <help><![CDATA[The Environment name.]]></help>
-      </option>
-      <option name="--no-debug" shortcut="">
-        <help><![CDATA[Switches off debug mode.]]></help>
-      </option>
-    </optionsBefore>
-  </command>
-  <command>
     <name>doctrine:database:create</name>
     <help><![CDATA[The <b>doctrine:database:create</b> command creates the default connections database:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:database:create</b><br> <br> You can also optionally specify the name of a connection to create the database for:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:database:create --connection=default</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--shard</td><td></td><td>The shard connection to use for this command</td></tr> <tr><td>--connection</td><td></td><td>The connection to use for this command</td></tr> <tr><td>--if-not-exists</td><td></td><td>Don't trigger an error, when the database already exists</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <optionsBefore>
@@ -1189,15 +1090,23 @@
     </optionsBefore>
   </command>
   <command>
-    <name>doctrine:generate:entities</name>
-    <help><![CDATA[The <b>doctrine:generate:entities</b> command generates entity classes<br> and method stubs from your mapping information:<br> <br> You have to limit generation of entities:<br> <br> * To a bundle:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:generate:entities MyCustomBundle</b><br> <br> * To a single entity:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:generate:entities MyCustomBundle:User</b><br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:generate:entities MyCustomBundle/Entity/User</b><br> <br> * To a namespace<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:generate:entities MyCustomBundle/Entity</b><br> <br> If the entities are not stored in a bundle, and if the classes do not exist,<br> the command has no way to guess where they should be generated. In this case,<br> you must provide the <comment>--path</comment> option:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:generate:entities Blog/Entity --path=src/</b><br> <br> By default, the unmodified version of each entity is backed up and saved<br> (e.g. Product.php~). To prevent this task from creating the backup file,<br> pass the <comment>--no-backup</comment> option:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:generate:entities Blog/Entity --no-backup</b><br> <br> <error>Important:</error> Even if you specified Inheritance options in your<br> XML or YAML Mapping files the generator cannot generate the base and<br> child classes for you correctly, because it doesn't know which<br> class is supposed to extend which. You have to adjust the entity<br> code manually for inheritance to work!<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--path</td><td></td><td>The path where to generate entities when it cannot be guessed</td></tr> <tr><td>--no-backup</td><td></td><td>Do not backup existing entities files.</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
-    <params>name</params>
+    <name>doctrine:fixtures:load</name>
+    <help><![CDATA[The <b>doctrine:fixtures:load</b> command loads data fixtures from your application:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:fixtures:load</b><br> <br> Fixtures are services that are tagged with <comment>doctrine.fixture.orm</comment>.<br> <br> If you want to append the fixtures instead of flushing the database first you can use the <comment>--append</comment> option:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:fixtures:load</b> <comment>--append</comment><br> <br> By default Doctrine Data Fixtures uses DELETE statements to drop the existing rows from the database.<br> If you want to use a TRUNCATE statement instead you can use the <comment>--purge-with-truncate</comment> flag:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:fixtures:load</b> <comment>--purge-with-truncate</comment><br> <br> To execute only fixtures that live in a certain group, use:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:fixtures:load</b> <comment>--group=group1</comment><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--append</td><td></td><td>Append the data fixtures instead of deleting all data from the database first.</td></tr> <tr><td>--group</td><td></td><td>Only load fixtures that belong to this group</td></tr> <tr><td>--em</td><td></td><td>The entity manager to use for this command.</td></tr> <tr><td>--shard</td><td></td><td>The shard connection to use for this command.</td></tr> <tr><td>--purge-with-truncate</td><td></td><td>Purge data by using a database-level TRUNCATE statement</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <optionsBefore>
-      <option name="--path" shortcut="" pattern="equals">
-        <help><![CDATA[The path where to generate entities when it cannot be guessed]]></help>
+      <option name="--append" shortcut="">
+        <help><![CDATA[Append the data fixtures instead of deleting all data from the database first.]]></help>
       </option>
-      <option name="--no-backup" shortcut="">
-        <help><![CDATA[Do not backup existing entities files.]]></help>
+      <option name="--group" shortcut="" pattern="equals">
+        <help><![CDATA[Only load fixtures that belong to this group]]></help>
+      </option>
+      <option name="--em" shortcut="" pattern="equals">
+        <help><![CDATA[The entity manager to use for this command.]]></help>
+      </option>
+      <option name="--shard" shortcut="" pattern="equals">
+        <help><![CDATA[The shard connection to use for this command.]]></help>
+      </option>
+      <option name="--purge-with-truncate" shortcut="">
+        <help><![CDATA[Purge data by using a database-level TRUNCATE statement]]></help>
       </option>
       <option name="--help" shortcut="-h">
         <help><![CDATA[Display this help message]]></help>
@@ -1370,7 +1279,7 @@
   </command>
   <command>
     <name>doctrine:migrations:diff</name>
-    <help><![CDATA[The <b>doctrine:migrations:diff</b> command generates a migration by comparing your current database to your mapping information:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:diff</b><br> <br> You can optionally specify a <comment>--editor-cmd</comment> option to open the generated file in your favorite editor:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:diff --editor-cmd=mate</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--configuration</td><td></td><td>The path to a migrations configuration file.</td></tr> <tr><td>--db-configuration</td><td></td><td>The path to a database connection configuration file.</td></tr> <tr><td>--editor-cmd</td><td></td><td>Open file with this command upon creation.</td></tr> <tr><td>--filter-expression</td><td></td><td>Tables which are filtered by Regular Expression.</td></tr> <tr><td>--formatted</td><td></td><td>Format the generated SQL.</td></tr> <tr><td>--line-length</td><td></td><td>Max line length of unformatted lines.</td></tr> <tr><td>--check-database-platform</td><td></td><td>Check Database Platform to the generated code.</td></tr> <tr><td>--db</td><td></td><td>The database connection to use for this command.</td></tr> <tr><td>--em</td><td></td><td>The entity manager to use for this command.</td></tr> <tr><td>--shard</td><td></td><td>The shard connection to use for this command.</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <help><![CDATA[The <b>doctrine:migrations:diff</b> command generates a migration by comparing your current database to your mapping information:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:diff</b><br> <br> You can optionally specify a <comment>--editor-cmd</comment> option to open the generated file in your favorite editor:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:diff --editor-cmd=mate</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--configuration</td><td></td><td>The path to a migrations configuration file.</td></tr> <tr><td>--db-configuration</td><td></td><td>The path to a database connection configuration file.</td></tr> <tr><td>--editor-cmd</td><td></td><td>Open file with this command upon creation.</td></tr> <tr><td>--filter-expression</td><td></td><td>Tables which are filtered by Regular Expression.</td></tr> <tr><td>--formatted</td><td></td><td>Format the generated SQL.</td></tr> <tr><td>--line-length</td><td></td><td>Max line length of unformatted lines.</td></tr> <tr><td>--check-database-platform</td><td></td><td>Check Database Platform to the generated code.</td></tr> <tr><td>--allow-empty-diff</td><td></td><td>Do not throw an exception when no changes are detected.</td></tr> <tr><td>--db</td><td></td><td>The database connection to use for this command.</td></tr> <tr><td>--em</td><td></td><td>The entity manager to use for this command.</td></tr> <tr><td>--shard</td><td></td><td>The shard connection to use for this command.</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <optionsBefore>
       <option name="--configuration" shortcut="" pattern="equals">
         <help><![CDATA[The path to a migrations configuration file.]]></help>
@@ -1392,6 +1301,9 @@
       </option>
       <option name="--check-database-platform" shortcut="" pattern="equals">
         <help><![CDATA[Check Database Platform to the generated code.]]></help>
+      </option>
+      <option name="--allow-empty-diff" shortcut="">
+        <help><![CDATA[Do not throw an exception when no changes are detected.]]></help>
       </option>
       <option name="--db" shortcut="" pattern="equals">
         <help><![CDATA[The database connection to use for this command.]]></help>
@@ -1653,7 +1565,7 @@
   </command>
   <command>
     <name>doctrine:migrations:migrate</name>
-    <help><![CDATA[The <b>doctrine:migrations:migrate</b> command executes a migration to a specified version or the latest available version:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate</b><br> <br> You can optionally manually specify the version you wish to migrate to:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate YYYYMMDDHHMMSS</b><br> <br> You can specify the version you wish to migrate to using an alias:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate prev</b><br> <b>These alias are defined : first, latest, prev, current and next</b><br> <br> You can specify the version you wish to migrate to using an number against the current version:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate current+3</b><br> <br> You can also execute the migration as a <comment>--dry-run</comment>:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate YYYYMMDDHHMMSS --dry-run</b><br> <br> You can output the would be executed SQL statements to a file with <comment>--write-sql</comment>:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate YYYYMMDDHHMMSS --write-sql</b><br> <br> Or you can also execute the migration without a warning message which you need to interact with:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate --no-interaction</b><br> <br> You can also time all the different queries if you wanna know which one is taking so long:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate --query-time</b><br> <br> Use the --all-or-nothing option to wrap the entire migration in a transaction.<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--write-sql</td><td></td><td>The path to output the migration SQL file instead of executing it. Defaults to current working directory.</td></tr> <tr><td>--dry-run</td><td></td><td>Execute the migration as a dry run.</td></tr> <tr><td>--query-time</td><td></td><td>Time all the queries individually.</td></tr> <tr><td>--allow-no-migration</td><td></td><td>Don't throw an exception if no migration is available (CI).</td></tr> <tr><td>--all-or-nothing</td><td></td><td>Wrap the entire migration in a transaction.</td></tr> <tr><td>--configuration</td><td></td><td>The path to a migrations configuration file.</td></tr> <tr><td>--db-configuration</td><td></td><td>The path to a database connection configuration file.</td></tr> <tr><td>--db</td><td></td><td>The database connection to use for this command.</td></tr> <tr><td>--em</td><td></td><td>The entity manager to use for this command.</td></tr> <tr><td>--shard</td><td></td><td>The shard connection to use for this command.</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <help><![CDATA[The <b>doctrine:migrations:migrate</b> command executes a migration to a specified version or the latest available version:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate</b><br> <br> You can optionally manually specify the version you wish to migrate to:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate YYYYMMDDHHMMSS</b><br> <br> You can specify the version you wish to migrate to using an alias:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate prev</b><br> <b>These alias are defined : first, latest, prev, current and next</b><br> <br> You can specify the version you wish to migrate to using an number against the current version:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate current+3</b><br> <br> You can also execute the migration as a <comment>--dry-run</comment>:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate YYYYMMDDHHMMSS --dry-run</b><br> <br> You can output the would be executed SQL statements to a file with <comment>--write-sql</comment>:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate YYYYMMDDHHMMSS --write-sql</b><br> <br> Or you can also execute the migration without a warning message which you need to interact with:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate --no-interaction</b><br> <br> You can also time all the different queries if you wanna know which one is taking so long:<br> <br> <b>C:\OSPanel\OSPanel\domains\testing\bin\console doctrine:migrations:migrate --query-time</b><br> <br> Use the --all-or-nothing option to wrap the entire migration in a transaction.<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--write-sql</td><td></td><td>The path to output the migration SQL file instead of executing it. Defaults to current working directory.</td></tr> <tr><td>--dry-run</td><td></td><td>Execute the migration as a dry run.</td></tr> <tr><td>--query-time</td><td></td><td>Time all the queries individually.</td></tr> <tr><td>--allow-no-migration</td><td></td><td>Do not throw an exception if no migration is available.</td></tr> <tr><td>--all-or-nothing</td><td></td><td>Wrap the entire migration in a transaction.</td></tr> <tr><td>--configuration</td><td></td><td>The path to a migrations configuration file.</td></tr> <tr><td>--db-configuration</td><td></td><td>The path to a database connection configuration file.</td></tr> <tr><td>--db</td><td></td><td>The database connection to use for this command.</td></tr> <tr><td>--em</td><td></td><td>The entity manager to use for this command.</td></tr> <tr><td>--shard</td><td></td><td>The shard connection to use for this command.</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <params>version[=null]</params>
     <optionsBefore>
       <option name="--write-sql" shortcut="" pattern="equals">
@@ -1666,7 +1578,7 @@
         <help><![CDATA[Time all the queries individually.]]></help>
       </option>
       <option name="--allow-no-migration" shortcut="">
-        <help><![CDATA[Don't throw an exception if no migration is available (CI).]]></help>
+        <help><![CDATA[Do not throw an exception if no migration is available.]]></help>
       </option>
       <option name="--all-or-nothing" shortcut="" pattern="equals">
         <help><![CDATA[Wrap the entire migration in a transaction.]]></help>
@@ -2273,6 +2185,648 @@
     </optionsBefore>
   </command>
   <command>
+    <name>make:auth</name>
+    <help><![CDATA[The <b>make:auth</b> command generates various authentication systems,<br> by asking questions.<br> <br> It can provide an empty authenticator, or a full login form authentication process.<br> In both cases it also updates your <b>security.yaml</b>.<br> For the login form, it also generates a controller and the twig template.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:auth</b><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:command</name>
+    <help><![CDATA[The <b>make:command</b> command generates a new command:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:command app:do-something</b><br> <br> If the argument is missing, the command will ask for the command name interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:controller</name>
+    <help><![CDATA[The <b>make:controller</b> command generates a new controller class.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:controller CoolStuffController</b><br> <br> If the argument is missing, the command will ask for the controller class name interactively.<br> <br> You can also generate the controller alone, without template with this option:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:controller --no-template</b><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--no-template</td><td></td><td>Use this option to disable template generation</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>controller-class[=null]</params>
+    <optionsBefore>
+      <option name="--no-template" shortcut="">
+        <help><![CDATA[Use this option to disable template generation]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:crud</name>
+    <help><![CDATA[The <b>make:crud</b> command generates crud controller with templates for selected entity.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:crud BlogPost</b><br> <br> If the argument is missing, the command will ask for the entity class name interactively.<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>entity-class[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:entity</name>
+    <help><![CDATA[The <b>make:entity</b> command creates or updates an entity and repository class.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:entity BlogPost</b><br> <br> If the argument is missing, the command will ask for the entity class name interactively.<br> <br> You can also mark this class as an API Platform resource. A hypermedia CRUD API will<br> automatically be available for this entity class:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:entity --api-resource</b><br> <br> You can also generate all the getter/setter/adder/remover methods<br> for the properties of existing entities:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:entity --regenerate</b><br> <br> You can also *overwrite* any existing methods:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:entity --regenerate --overwrite</b><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--api-resource</td><td>(-a)</td><td>Mark this class as an API Platform resource (expose a CRUD API for it)</td></tr> <tr><td>--regenerate</td><td></td><td>Instead of adding new fields, simply generate the methods (e.g. getter/setter) for existing fields</td></tr> <tr><td>--overwrite</td><td></td><td>Overwrite any existing getter/setter methods</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null]</params>
+    <optionsBefore>
+      <option name="--api-resource" shortcut="-a">
+        <help><![CDATA[Mark this class as an API Platform resource (expose a CRUD API for it)]]></help>
+      </option>
+      <option name="--regenerate" shortcut="">
+        <help><![CDATA[Instead of adding new fields, simply generate the methods (e.g. getter/setter) for existing fields]]></help>
+      </option>
+      <option name="--overwrite" shortcut="">
+        <help><![CDATA[Overwrite any existing getter/setter methods]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:fixtures</name>
+    <help><![CDATA[The <b>make:fixtures</b> command generates a new Doctrine fixtures class.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:fixtures AppFixtures</b><br> <br> If the argument is missing, the command will ask for a class interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>fixtures-class[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:form</name>
+    <help><![CDATA[The <b>make:form</b> command generates a new form class.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:form UserType</b><br> <br> If the argument is missing, the command will ask for the form class interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null] bound-class[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:functional-test</name>
+    <help><![CDATA[The <b>make:functional-test</b> command generates a new functional test class.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:functional-test DefaultControllerTest</b><br> <br> If the argument is missing, the command will ask for the class name interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:migration</name>
+    <help><![CDATA[The <b>make:migration</b> command generates a new migration:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:migration</b><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--db</td><td></td><td>The database connection name</td></tr> <tr><td>--em</td><td></td><td>The entity manager name</td></tr> <tr><td>--shard</td><td></td><td>The shard connection name</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <optionsBefore>
+      <option name="--db" shortcut="" pattern="equals">
+        <help><![CDATA[The database connection name]]></help>
+      </option>
+      <option name="--em" shortcut="" pattern="equals">
+        <help><![CDATA[The entity manager name]]></help>
+      </option>
+      <option name="--shard" shortcut="" pattern="equals">
+        <help><![CDATA[The shard connection name]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:registration-form</name>
+    <help><![CDATA[The <b>make:registration-form</b> command generates a complete registration form, controller & template.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:registration-form</b><br> <br> The command will ask for several pieces of information to build your form.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:serializer:encoder</name>
+    <help><![CDATA[The <b>make:serializer:encoder</b> command generates a new serializer encoder class.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:serializer:encoder YamlEncoder</b><br> <br> If the argument is missing, the command will ask for the class name interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null] format[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:serializer:normalizer</name>
+    <help><![CDATA[The <b>make:serializer:normalizer</b> command generates a new serializer normalizer class.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:serializer:normalizer UserNormalizer</b><br> <br> If the argument is missing, the command will ask for the class name interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:subscriber</name>
+    <help><![CDATA[The <b>make:subscriber</b> command generates a new event subscriber class.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:subscriber ExceptionSubscriber</b><br> <br> If the argument is missing, the command will ask for the class name interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null] event[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:twig-extension</name>
+    <help><![CDATA[The <b>make:twig-extension</b> command generates a new twig extension class.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:twig-extension AppExtension</b><br> <br> If the argument is missing, the command will ask for the class name interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:unit-test</name>
+    <help><![CDATA[The <b>make:unit-test</b> command generates a new unit test class.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:unit-test UtilTest</b><br> <br> If the argument is missing, the command will ask for the class name interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:user</name>
+    <help><![CDATA[The <b>make:user</b> command generates a new user class for security<br> and updates your security.yaml file for it. It will also generate a user provider<br> class if your situation needs a custom class.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:user User</b><br> <br> If the argument is missing, the command will ask for the class name interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--is-entity</td><td></td><td>Do you want to store user data in the database (via Doctrine)?</td></tr> <tr><td>--identity-property-name</td><td></td><td>Enter a property name that will be the unique "display" name for the user (e.g. <comment>email, username, uuid</comment>)</td></tr> <tr><td>--with-password</td><td></td><td>Will this app be responsible for checking the password? Choose <comment>No</comment> if the password is actually checked by some other system (e.g. a single sign-on server)</td></tr> <tr><td>--use-argon2</td><td></td><td>Use the Argon2i password encoder? (deprecated)</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null]</params>
+    <optionsBefore>
+      <option name="--is-entity" shortcut="">
+        <help><![CDATA[Do you want to store user data in the database (via Doctrine)?]]></help>
+      </option>
+      <option name="--identity-property-name" shortcut="" pattern="equals">
+        <help><![CDATA[Enter a property name that will be the unique "display" name for the user (e.g. <comment>email, username, uuid</comment>)]]></help>
+      </option>
+      <option name="--with-password" shortcut="">
+        <help><![CDATA[Will this app be responsible for checking the password? Choose <comment>No</comment> if the password is actually checked by some other system (e.g. a single sign-on server)]]></help>
+      </option>
+      <option name="--use-argon2" shortcut="">
+        <help><![CDATA[Use the Argon2i password encoder? (deprecated)]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:validator</name>
+    <help><![CDATA[The <b>make:validator</b> command generates a new validation constraint.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:validator EnabledValidator</b><br> <br> If the argument is missing, the command will ask for the constraint class name interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:voter</name>
+    <help><![CDATA[The <b>make:voter</b> command generates a new security voter.<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console make:voter BlogPostVoter</b><br> <br> If the argument is missing, the command will ask for the class name interactively.<br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
     <name>router:match</name>
     <help><![CDATA[The <b>router:match</b> shows which routes match a given request and which don't and for what reason:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console router:match /foo</b><br> <br> or<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console router:match /foo --method POST --scheme https --host symfony.com --verbose</b><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--method</td><td></td><td>Sets the HTTP method</td></tr> <tr><td>--scheme</td><td></td><td>Sets the URI scheme (usually http or https)</td></tr> <tr><td>--host</td><td></td><td>Sets the URI host</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <params>path_info</params>
@@ -2285,6 +2839,43 @@
       </option>
       <option name="--host" shortcut="" pattern="equals">
         <help><![CDATA[Sets the URI host]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>security:encode-password</name>
+    <help><![CDATA[<br> The <b>security:encode-password</b> command encodes passwords according to your<br> security configuration. This command is mainly used to generate passwords for<br> the <comment>in_memory</comment> user provider type and for changing passwords<br> in the database while developing the application.<br> <br> Suppose that you have the following security configuration in your application:<br> <br> <comment><br> # app/config/security.yml<br> security:<br> encoders:<br> Symfony\Component\Security\Core\User\User: plaintext<br> App\Entity\User: auto<br> </comment><br> <br> If you execute the command non-interactively, the first available configured<br> user class under the <comment>security.encoders</comment> key is used and a random salt is<br> generated to encode the password:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console security:encode-password --no-interaction [password]</b><br> <br> Pass the full user class path as the second argument to encode passwords for<br> your own entities:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console security:encode-password --no-interaction [password] App\Entity\User</b><br> <br> Executing the command interactively allows you to generate a random salt for<br> encoding the password:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console security:encode-password [password] App\Entity\User</b><br> <br> In case your encoder doesn't require a salt, add the <comment>empty-salt</comment> option:<br> <br> <b>php C:\OSPanel\OSPanel\domains\testing\bin\console security:encode-password --empty-salt [password] App\Entity\User</b><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--empty-salt</td><td></td><td>Do not generate a salt or let the encoder generate one.</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>password[=null] user-class[=null]</params>
+    <optionsBefore>
+      <option name="--empty-salt" shortcut="">
+        <help><![CDATA[Do not generate a salt or let the encoder generate one.]]></help>
       </option>
       <option name="--help" shortcut="-h">
         <help><![CDATA[Display this help message]]></help>

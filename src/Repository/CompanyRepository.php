@@ -35,18 +35,17 @@ class CompanyRepository extends ServiceEntityRepository
         ;
     }
     */
-    //Метод для поиска компании из существующих компаний
     public function findByCompany($name_company)
     {
         return $this->getEntityManager()->createQueryBuilder()
-            ->select('id')
+            ->select('Company')
             ->from(Company::class, 'Company')
             ->where('Company.name_company = :val')
             ->setParameter('val', $name_company)
             ->getQuery()
-            ->getResult();
+            ->setMaxResults(1)
+            ->getOneOrNullResult();
     }
-
     /*
     public function findOneBySomeField($value): ?Company
     {

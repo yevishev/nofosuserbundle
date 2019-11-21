@@ -49,7 +49,6 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=40)
      */
     private $last_name;
-
     /**
      * @ORM\Column(type="datetime_immutable")
      */
@@ -61,12 +60,10 @@ class User implements UserInterface
      */
     private $company;
 
-    private $referrer;
-
-    public function setReferrer($referrer): void
-    {
-        $this->referrer = $referrer;
-    }
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     */
+    private $Inviter;
 
     public function getId(): ?int
     {
@@ -190,6 +187,18 @@ class User implements UserInterface
     public function setCompany(?Company $company): self
     {
         $this->company = $company;
+
+        return $this;
+    }
+
+    public function getInviter(): ?self
+    {
+        return $this->Inviter;
+    }
+
+    public function setInviter(?self $Inviter): self
+    {
+        $this->Inviter = $Inviter;
 
         return $this;
     }
