@@ -44,7 +44,7 @@ class RegistrationFormType extends AbstractType
                         'message' => 'Please enter a first name',
                     ]),
                     new Regex([
-                        'pattern' => '/[а-яёА-ЯЁa-zA-Z]{2,30}$/',
+                        'pattern' => '/^[а-яёйА-ЯЙЁa-zA-Z]{2,30}$/',
                         'message' => 'Invalid first name'
                     ])
                 ]
@@ -59,7 +59,7 @@ class RegistrationFormType extends AbstractType
                         'message' => 'Please enter a second name',
                     ]),
                     new Regex([
-                        'pattern' => '/[а-яёА-ЯЁa-zA-Z]{2,30}/ui',
+                        'pattern' => '/^[а-яйёА-ЯЙЁa-zA-Z]{2,30}/ui',
                         'message' => 'Invalid last name'
                     ])
                 ]
