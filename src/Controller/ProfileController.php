@@ -21,14 +21,25 @@ class ProfileController extends AbstractController
     {
         /** @var User $user */
         $user = $this->getUser();
-        $dataUser = [
-            'phone' => $user->getPhone(),
-            'first name' => $user->getFirstName(),
-            'last name' => $user->getLastName(),
-            'company' => $user->getCompany()->getNameCompany(),
-            'inviter_fn' => $user->getInviter()->getFirstName(),
-            'inviter_ln' => $user->getInviter()->getLastName(),
-        ];
+        if ($user->getInviter() === (null || 0)){
+            $dataUser = [
+                'phone' => $user->getPhone(),
+                'first name' => $user->getFirstName(),
+                'last name' => $user->getLastName(),
+                'company' => $user->getCompany()->getNameCompany(),
+                'inviter_fn' => 'Nobody invited me',
+                'inviter_ln' => '',
+            ];
+        } else {
+            $dataUser = [
+                'phone' => $user->getPhone(),
+                'first name' => $user->getFirstName(),
+                'last name' => $user->getLastName(),
+                'company' => $user->getCompany()->getNameCompany(),
+                'inviter_fn' => $user->getInviter()->getFirstName(),
+                'inviter_ln' => $user->getInviter()->getLastName(),
+            ];
+        }
         return $this->render('profile/profile.html.twig', [
             'phone' => $dataUser['phone'],
             'first_name' => $dataUser['first name'],

@@ -24,7 +24,8 @@ class ReferrerService
     public function query()
     {
         $tempList  = $this->em->getRepository(User::class)->findAllUsers();
-        $list['Choose referrer'] = '0';
+        $list['Choose referrer'] = '';
+        $list['Nobody invited me'] = 0;
         foreach ($tempList as $value){
             $data = "{$value['first_name']} {$value['last_name']} (тел. {$value['phone']})";
             $list[$data] = $value['id'];

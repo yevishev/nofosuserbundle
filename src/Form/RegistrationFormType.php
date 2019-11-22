@@ -2,26 +2,22 @@
 
 namespace App\Form;
 
-use App\Controller\RegistrationController;
-use App\Entity\Company;
 use App\Entity\User;
-use App\Repository\UserRepository;
 use App\Services\ReferrerService;
-use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\ORM\EntityRepository;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Regex;
 
 class RegistrationFormType extends AbstractType
 {
@@ -42,19 +38,46 @@ class RegistrationFormType extends AbstractType
                 'attr' => ['class' => 'form-control',
                     'placeholder' => 'First name'
                 ],
-                'label' => false
+                'label' => false,
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Please enter a first name',
+                    ]),
+                    new Regex([
+                        'pattern' => '/[а-яёА-ЯЁa-zA-Z]{2,30}$/',
+                        'message' => 'Invalid first name'
+                    ])
+                ]
             ])
             ->add('last_name', TextType::class, [
                 'attr' => ['class' => 'form-control',
                     'placeholder' => 'Last name'
                 ],
-                'label' => false
+                'label' => false,
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Please enter a second name',
+                    ]),
+                    new Regex([
+                        'pattern' => '/[а-яёА-ЯЁa-zA-Z]{2,30}/ui',
+                        'message' => 'Invalid last name'
+                    ])
+                ]
             ])
-            ->add('phone', TextType::class, [
+            ->add('phone', TelType::class, [
                 'attr' => ['class' => 'form-control',
                     'placeholder' => 'Phone number'
                 ],
-                'label' => false
+                'label' => false,
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Please enter a first name',
+                    ]),
+                    new Regex([
+                        'pattern' => '/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){6,15}(\s*)?$/',
+                        'message' => 'Invalid phone number'
+                    ])
+                ]
             ])
             ->add('referrer', ChoiceType::class, [
                 'mapped' => false,
