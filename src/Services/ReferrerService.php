@@ -20,7 +20,7 @@ class ReferrerService
     {
         $this->em = $em;
     }
-
+    //Метод для отрисовки select`a со списоком существующих пользователей
     public function query()
     {
         $tempList  = $this->em->getRepository(User::class)->findAllUsers();
@@ -32,7 +32,7 @@ class ReferrerService
         }
         return $list;
     }
-
+    //Метод для поиска компании . Если компании нет, то добавим её в бд
     public function queryCompany($name_company)
     {
         $com = $this->em->getRepository(Company::class)->findByCompany($name_company);

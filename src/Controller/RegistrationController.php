@@ -55,15 +55,24 @@ class RegistrationController extends AbstractController
                     $form->get('enterPassword')->getData()
                 )
             );
+            //Ищем есть ли компания с таким названием
             $comFromForm = $form->get('company')->getData();
+            //Получаем id пригласившего/(или никто не пригласил) пользователя
             $referrer = $this->getDoctrine()
                             ->getRepository(User::class)
                             ->find($form->get('referrer')->getData());
+            //Записываем id пригласившего пользователя в пользователя, который регистрируется
+            //затем отображаем его имя в странице профиля
             $user->setInviter($referrer);
+            //Записываем id компании, если она существует. Если нет, то запишем ее в сущность
+            //Компании
             $user->setCompany($this->rs->queryCompany($comFromForm));
+            //Запишем дату регистрации
             $user->setDateReg(new \DateTimeImmutable());
+            //Запишем роль (поскольку роль одна запишем константу)
             $user->setRoles(array('ROLE_USER'));
             $entityManager->persist($user);
+            //Соберем и сохраним данные
             $entityManager->flush();
 
             return $guardHandler->authenticateUserAndHandleSuccess(

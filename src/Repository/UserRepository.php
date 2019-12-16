@@ -22,7 +22,7 @@ class UserRepository extends ServiceEntityRepository
     // /**
     //  * @return User[] Returns an array of User objects
     //  */
-    //Метод для вывода массива существующих пользователей
+    //Метод для вывода массива существующих пользователей при регистрации
     public function findAllUsers()
     {
         return $this->getEntityManager()->createQueryBuilder()

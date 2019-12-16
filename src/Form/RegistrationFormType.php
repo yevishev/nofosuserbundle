@@ -30,9 +30,9 @@ class RegistrationFormType extends AbstractType
     {
         $this->rs = $rs;
     }
+    //Метод buildForm отвечает за отрисовку формы регистрации
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-
         $builder
             ->add('first_name', TextType::class, [
                 'attr' => ['class' => 'form-control',

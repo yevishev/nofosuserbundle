@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class ProfileController extends AbstractController
 {
-    /**
+    /**Рендеринг страницы профиля
      * @Route("/")
      * @return Response
      */
@@ -21,7 +21,7 @@ class ProfileController extends AbstractController
     {
         /** @var User $user */
         $user = $this->getUser();
-        if ($user->getInviter() === (null || 0)){
+        if ($user->getInviter() === (null || 0 || 1)){
             $dataUser = [
                 'phone' => $user->getPhone(),
                 'first name' => $user->getFirstName(),

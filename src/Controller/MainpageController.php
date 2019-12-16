@@ -9,6 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MainpageController extends AbstractController
 {
     /**
+     * Отрисовка шаблона главной страницы
      * @Route("/")
      */
     function view()

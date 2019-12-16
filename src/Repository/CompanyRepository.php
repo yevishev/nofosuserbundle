@@ -35,6 +35,7 @@ class CompanyRepository extends ServiceEntityRepository
         ;
     }
     */
+    //Формирование запроса на наличие компании в бд
     public function findByCompany($name_company)
     {
         return $this->getEntityManager()->createQueryBuilder()
