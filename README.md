@@ -10,5 +10,3 @@ server settings: apache-php-7.2
 - `php bin/console doctrine:migrations:migrate`
 
 Ставим папку `/public` на чтение
-
-P.S. Настраивать апач нет необходимости, поскольку композером вы подтянули symfony/apache-pack 
